@@ -4,8 +4,8 @@ SELECT bookings.id AS booking_id,
        bookings.start_date,
        bookings.end_date,
        bookings.booking_status AS status
-FROM bookings JOIN users ON bookings.user_id = users.id
-              JOIN vehicles ON bookings.vehicle_id = vehicles.id;
+FROM bookings JOIN users USING(user_id)
+              JOIN vehicles USING(vehicle_id);
 
 
 SELECT vehicle_name AS name,
@@ -26,5 +26,5 @@ SELECT * FROM vehicles WHERE type = 'car' AND availability_status = 'available';
 
 SELECT vehicle_name,
        count(*) AS total_bookings
-FROM bookings JOIN vehicles USING (vehicle_id) WHERE booking_status != 'cancelled'
+FROM bookings JOIN vehicles USING (vehicle_id)
 GROUP BY vehicle_name HAVING count(*) > 2;
