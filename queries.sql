@@ -7,6 +7,7 @@ SELECT bookings.id AS booking_id,
 FROM bookings JOIN users ON bookings.user_id = users.id
               JOIN vehicles ON bookings.vehicle_id = vehicles.id;
 
+
 SELECT vehicle_name AS name,
        type,
        model,
