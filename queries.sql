@@ -14,14 +14,17 @@ SELECT vehicle_name AS name,
        registration_number,
        rental_price_per_day AS rental_price,
        availability_status AS status
-FROM vehicles EXISTS
-WHERE availability_status = 'available' OR availability_status = 'maintenance';
-
+       FROM vehicles 
+WHERE NOT EXISTS(
+    SELECT vehicle_id FROM bookings 
+    WHERE bookings.vehicle_id = vehicles.vehicle_id 
+)
+    
 
 SELECT * FROM vehicles WHERE type = 'car' AND availability_status = 'available';
 
 
 SELECT vehicle_name,
        count(*) AS total_bookings
-FROM bookings JOIN vehicles ON bookings.vehicle_id = vehicles.id  WHERE bookings.booking_status = 'completed' OR bookings.booking_status = 'confirmed'
+FROM bookings JOIN vehicles USING (vehicle_id) WHERE booking_status != 'cancelled'
 GROUP BY vehicle_name HAVING count(*) > 2;
