@@ -111,4 +111,4 @@ HAVING COUNT(*) > 2;
 
 ### 📄 License
 
-This sumple SQL project is open-source and can be used for learning, academic purposes.
+This simple SQL project is open-source and can be used for learning, academic purposes.
