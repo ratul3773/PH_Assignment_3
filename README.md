@@ -37,10 +37,10 @@ Make sure the following tables exist:
 
 Add some sample records into users, vehicles, and bookings tables so the queries return results.
 
+
 ### 4️⃣ Run the SQL Queries
 
 Open your SQL client (MySQL Workbench / pgAdmin / CLI) and execute the queries below.
-
 
 ## 🧾 SQL Queries
 
