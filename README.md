@@ -108,3 +108,7 @@ HAVING COUNT(*) > 2;
 - Vehicle availability tracking
 - Admin analytics
 - Business insights
+
+### 📄 License
+
+This sumple SQL project is open-source and can be used for learning, academic purposes.
