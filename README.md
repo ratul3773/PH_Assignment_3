@@ -29,6 +29,7 @@ JOIN users USING (user_id)
 JOIN vehicles USING (vehicle_id);
 ```
 
+
 ### 2️⃣ Find All Vehicles That Have Never Been Booked
 
 This query returns vehicles that do not appear in the bookings table.
@@ -47,6 +48,7 @@ WHERE NOT EXISTS (
 );
 ```
 
+
 ### 3️⃣ Retrieve All Available Vehicles of a Specific Type (e.g., Cars)
 
 This query finds all vehicles of type car that are currently available.
@@ -56,6 +58,7 @@ FROM vehicles
 WHERE type = 'car'
 AND availability_status = 'available';
 ```
+
 
 ### 4️⃣ Find Vehicles with More Than 2 Bookings
 
@@ -71,10 +74,7 @@ HAVING COUNT(*) > 2;
 
 ### ✅ Use Cases
 
-Booking history reporting
-
-Vehicle availability tracking
-
-Admin analytics
-
-Business insights
+- Booking history reporting
+- Vehicle availability tracking
+- Admin analytics
+- Business insights
