@@ -78,3 +78,33 @@ HAVING COUNT(*) > 2;
 - Vehicle availability tracking
 - Admin analytics
 - Business insights
+
+## ▶️ How to Run These SQL Queries (Public Instructions)
+
+Anyone can run these queries by following the steps below.
+
+### 1️⃣ Set Up a Database
+
+Create a database in your SQL environment (MySQL / PostgreSQL):
+
+```sql
+CREATE DATABASE vehicle_booking_system;
+```
+
+Select the database
+# 2️⃣ Create Required Tables
+
+Make sure the following tables exist:
+
+- users(user_id, name, email,password,phone_number,role)
+- vehicles(vehicle_id, vehicle_name, type, model, registration_number, rental_price_per_day, availability_status)
+- bookings(id, user_id, vehicle_id, start_date, end_date, booking_status)
+
+# 3️⃣ Insert Sample Data
+
+Add some sample records into users, vehicles, and bookings tables so the queries return results.
+
+# 4️⃣ Run the SQL Queries
+
+Open your SQL client (MySQL Workbench / pgAdmin / CLI) and execute the queries below.
+
